@@ -1,0 +1,38 @@
+{
+  "name": "contentful-nextjs-tutorials",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.3.5",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "^2.1.3",
+    "@mui/material": "^5.15.15",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@tailwindcss/typography": "^0.5.2",
+    "contentful": "^10.8.6",
+    "date-and-time": "^3.1.1",
+    "next": "^14.1.4",
+    "prettier": "^3.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "scheduler": "^0.23.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.1.4",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.24"
+  }
+}
