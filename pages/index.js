@@ -1,22 +1,18 @@
-import { getCompany, getJobs } from '../datalayer'
-import JobsList from '../components/jobsData/list/JobsList'
-import FilterComponent from '../components/Forms/filters'
-export default function Index({ companies, jobs }) {
-  return (
-    <div className=' flex relative  w-full  p-12 text-center  focus:outline-none focus:ring-2 focus:ring-offset-2 gap-8 '>
-      <FilterComponent />
-      <JobsList jobs={jobs} />
-    </div>
-  )
+import { getJobs, getJobsSkills } from '../datalayer'
+
+import JobsPage from '../components/ui/JobsPage'
+
+export default function Index({ jobSkills, jobs }) {
+  return <JobsPage jobs={jobs} jobSkills={jobSkills} />
 }
 
 export const getStaticProps = async ctx => {
-  let companies = await getCompany()
+  const jobSkills = await getJobsSkills()
   let jobs = await getJobs()
 
   return {
     props: {
-      companies,
+      jobSkills,
       jobs,
     },
   }

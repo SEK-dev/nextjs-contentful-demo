@@ -23,6 +23,21 @@ export const companyReducer = company => {
   }
 }
 
+export const tagsReducer = tagsField => {
+  let tags = []
+  tagsField.map(rawTag => {
+    const tag = rawTag.sys.id
+    tags.push(tag)
+  })
+  return tags
+}
+
+export const skillsReducer = parsedTags => {
+  const skillTags = parsedTags.filter(tag => tag.includes('skills'))
+  const skills = skillTags.map(skillTag => skillTag.replace('skills', ''))
+  return skills
+}
+
 export const imageReducer = imageData => {
   return {
     url: `https:${imageData?.fields?.file?.url}` || '',

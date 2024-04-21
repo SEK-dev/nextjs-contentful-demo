@@ -8,4 +8,7 @@ export {
   getSlugs,
   getJobBySlug,
   getJobsByCompanyId,
+  searchJobs,
+  getJobsSkills,
+  searchCompaniesButReturnJobs,
 } from './contentful/jobs'
